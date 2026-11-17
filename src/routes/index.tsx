@@ -21,6 +21,7 @@ const localBusiness = {
   email: "boipelolovedalia958@gmail.com",
   image: "https://masseusethehealer.com/og-image.jpg",
   logo: "https://masseusethehealer.com/icon-512.png",
+  sameAs: ["https://share.google/PMDA4Ocp5WBi5TU4q"],
   areaServed: [
     { "@type": "City", name: "Kathu" },
     { "@type": "City", name: "Kuruman" },
@@ -60,6 +61,8 @@ const PHONE = "078 650 1056";
 const TEL = "tel:0786501056";
 const WA = (msg: string) => `https://wa.me/27786501056?text=${encodeURIComponent(msg)}`;
 const EMAIL = "boipelolovedalia958@gmail.com";
+const GOOGLE_PROFILE = "https://share.google/PMDA4Ocp5WBi5TU4q";
+const GOOGLE_REVIEW = "https://g.page/r/CRBNmY9LPHmkECE/review";
 const hero = [p9, p1, p3, p6, p2, p4];
 const gallery = [
   { src: p1, alt: "Therapist massaging a client's legs on a portable massage table" },
@@ -187,7 +190,13 @@ function Index() {
         </div>
       </section>
 
-      <footer className="relative z-10 py-10 text-center text-xs text-muted-foreground">© 2026 Masseuse The Healer. All rights reserved.</footer>
+      <footer className="relative z-10 py-10 text-center text-xs text-muted-foreground">
+        <p className="mb-4 flex flex-wrap justify-center gap-x-6 gap-y-2 uppercase tracking-[0.2em]">
+          <a href={GOOGLE_PROFILE} target="_blank" rel="noreferrer" className="border-b border-primary/30 pb-0.5 hover:text-accent-foreground">Find us on Google</a>
+          <a href={GOOGLE_REVIEW} target="_blank" rel="noreferrer" className="border-b border-primary/30 pb-0.5 hover:text-accent-foreground">Leave us a review</a>
+        </p>
+        © 2026 Masseuse The Healer. All rights reserved.
+      </footer>
     </div>
   );
 }
