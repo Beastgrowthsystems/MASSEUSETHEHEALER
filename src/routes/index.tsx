@@ -10,17 +10,48 @@ import logo from "@/assets/photos/healer-7.jpg";
 import p8 from "@/assets/photos/healer-8.jpg";
 import p9 from "@/assets/photos/healer-9.jpg";
 
+const localBusiness = {
+  "@context": "https://schema.org",
+  "@type": "HealthAndBeautyBusiness",
+  "@id": "https://masseusethehealer.com/#business",
+  name: "Masseuse The Healer",
+  description: "Mobile massage at your home in Kathu, Kuruman and Mothibistad. Full body, lower body and upper body massage, 7 days a week.",
+  url: "https://masseusethehealer.com/",
+  telephone: "+27786501056",
+  email: "boipelolovedalia958@gmail.com",
+  image: "https://masseusethehealer.com/og-image.jpg",
+  logo: "https://masseusethehealer.com/icon-512.png",
+  areaServed: [
+    { "@type": "City", name: "Kathu" },
+    { "@type": "City", name: "Kuruman" },
+    { "@type": "Place", name: "Mothibistad" },
+  ],
+  openingHoursSpecification: [{
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    opens: "08:00",
+    closes: "19:00",
+  }],
+};
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Masseuse The Healer | Premium Mobile Massage" },
+      { title: "Mobile Massage in Kathu, Kuruman & Mothibistad | Masseuse The Healer" },
       { name: "description", content: "Five-star mobile massage in Kathu, Kuruman & Mothibistad. Book 7 days a week." },
-      { property: "og:title", content: "Masseuse The Healer | Premium Mobile Massage" },
+      { property: "og:title", content: "Mobile Massage in Kathu, Kuruman & Mothibistad | Masseuse The Healer" },
       { property: "og:description", content: "Five-star mobile massage brought to your home. Book 7 days a week, 8 AM – 7 PM." },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://masseusethehealer.com/" },
+      { property: "og:image", content: "https://masseusethehealer.com/og-image.jpg" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "Masseuse The Healer logo" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://masseusethehealer.com/og-image.jpg" },
     ],
     links: [{ rel: "canonical", href: "https://masseusethehealer.com/" }],
+    scripts: [{ type: "application/ld+json", children: JSON.stringify(localBusiness) }],
   }),
   component: Index,
 });
@@ -30,7 +61,16 @@ const TEL = "tel:0786501056";
 const WA = (msg: string) => `https://wa.me/27786501056?text=${encodeURIComponent(msg)}`;
 const EMAIL = "boipelolovedalia958@gmail.com";
 const hero = [p9, p1, p3, p6, p2, p4];
-const gallery = [p1, p3, p5, p9, p6, p8, p2, p4];
+const gallery = [
+  { src: p1, alt: "Therapist massaging a client's legs on a portable massage table" },
+  { src: p3, alt: "Back massage on a portable massage table, client covered with a towel" },
+  { src: p5, alt: "Client lying face down on the massage table, ready for a back massage" },
+  { src: p9, alt: "Masseuse The Healer therapist in her branded apron" },
+  { src: p6, alt: "Upper back massage in progress" },
+  { src: p8, alt: "Massage table set up with fresh towels and oils" },
+  { src: p2, alt: "Therapist working on a client's lower legs" },
+  { src: p4, alt: "Therapist massaging a client's back, covered with a towel" },
+];
 
 const treatments = [
   { name: "Full Body", meta: "Up to 40 Mins", text: "A comprehensive, head-to-toe therapeutic journey designed to release deep tension, improve circulation, and restore total balance.", cta: "Book Full Body", tag: "Best value" },
@@ -75,8 +115,8 @@ function Index() {
         </div>
         <div className="hero-overlay absolute inset-0" />
         <div className="float-in relative mx-auto w-full max-w-6xl px-6 pt-24 text-primary-foreground">
-          <p className="mb-5 text-xs uppercase tracking-[0.35em] text-accent">Kathu • Kuruman • Mothibistad</p>
-          <h1 className="font-serif text-6xl leading-[0.95] md:text-8xl">The Art of<br /><em>True Healing.</em></h1>
+          <h1 className="mb-5 text-xs uppercase tracking-[0.35em] text-accent">Mobile massage in Kathu, Kuruman &amp; Mothibistad</h1>
+          <p className="font-serif text-6xl leading-[0.95] md:text-8xl">The Art of<br /><em>True Healing.</em></p>
           <p className="mt-6 max-w-lg text-base font-light opacity-90">Five-star massage therapy, brought directly to your sanctuary.</p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Btn href={WA("Hi, I'd like to book a Full Body massage.")}>Book Full Body</Btn>
@@ -99,9 +139,9 @@ function Index() {
 
       <section className="relative z-10 py-10">
         <div className="marquee gap-6">
-          {[...gallery, ...gallery].map((p, i) => (
+          {[...gallery, ...gallery].map((g, i) => (
             <div key={i} className="h-80 w-60 shrink-0 overflow-hidden rounded-3xl shadow-xl md:h-[26rem] md:w-80">
-              <img src={p} alt="Massage session by Masseuse The Healer" loading="lazy" className="h-full w-full object-cover transition-transform duration-[3s] hover:scale-110" />
+              <img src={g.src} alt={g.alt} loading="lazy" className="h-full w-full object-cover transition-transform duration-[3s] hover:scale-110" />
             </div>
           ))}
         </div>
@@ -126,7 +166,7 @@ function Index() {
       </section>
 
       <section className="relative z-10 mx-auto grid max-w-6xl items-center gap-12 px-6 py-24 md:grid-cols-2">
-        <img src={p9} alt="The Healer in her studio" className="h-[32rem] w-full rounded-[2rem] object-cover shadow-2xl" />
+        <img src={p9} alt="Masseuse The Healer therapist ready for a session" className="h-[32rem] w-full rounded-[2rem] object-cover shadow-2xl" />
         <div>
           <h2 className="font-serif text-5xl md:text-6xl">A sanctuary of <em>stillness.</em></h2>
           <p className="mt-6 text-muted-foreground">True luxury is the ability to disconnect from the world and reconnect with yourself. Across Kathu, Kuruman and Mothibistad, we bring professional, restorative massage straight to your home or preferred space.</p>
