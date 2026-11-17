@@ -1,14 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Smoke } from "@/components/Smoke";
-import p1 from "@/assets/photos/healer-1.jpg";
-import p2 from "@/assets/photos/healer-2.jpg";
-import p3 from "@/assets/photos/healer-3.jpg";
-import p4 from "@/assets/photos/healer-4.jpg";
-import p5 from "@/assets/photos/healer-5.jpg";
-import p6 from "@/assets/photos/healer-6.jpg";
-import logo from "@/assets/photos/healer-7.jpg";
-import p8 from "@/assets/photos/healer-8.jpg";
-import p9 from "@/assets/photos/healer-9.jpg";
+import p1 from "@/assets/photos/healer-1.webp";
+import p2 from "@/assets/photos/healer-2.webp";
+import p3 from "@/assets/photos/healer-3.webp";
+import p4 from "@/assets/photos/healer-4.webp";
+import p5 from "@/assets/photos/healer-5.webp";
+import p6 from "@/assets/photos/healer-6.webp";
+import logo from "@/assets/photos/healer-7-nav.webp";
+import p8 from "@/assets/photos/healer-8.webp";
+import p9 from "@/assets/photos/healer-9.webp";
 
 const localBusiness = {
   "@context": "https://schema.org",
@@ -103,7 +103,7 @@ function Index() {
       <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4">
         <nav className="glass mx-auto flex max-w-6xl items-center justify-between rounded-full px-5 py-2 hover:translate-y-0">
           <a href="#" className="flex items-center gap-3">
-            <img src={logo} alt="Masseuse The Healer logo" className="h-10 w-10 rounded-full object-cover" />
+            <img src={logo} alt="Masseuse The Healer logo" width={40} height={40} className="h-10 w-10 rounded-full object-cover" />
             <span className="font-serif text-xl text-primary-foreground mix-blend-difference">Masseuse <em>The Healer</em></span>
           </a>
           <Btn href={WA("Hi, I'd like to book a massage.")}>Book Now</Btn>
@@ -132,7 +132,7 @@ function Index() {
         <div className="grid gap-6 md:grid-cols-3">
           {values.map((v) => (
             <div key={v.title} className="glass rounded-3xl p-8">
-              <h3 className="font-serif text-3xl">{v.title}</h3>
+              <h2 className="font-serif text-3xl">{v.title}</h2>
               <p className="mt-3 text-sm text-muted-foreground">{v.text}</p>
               <a href={WA(`Hi! ${v.cta}, please.`)} target="_blank" rel="noreferrer" className="mt-6 inline-block border-b border-primary pb-1 text-xs font-semibold uppercase tracking-[0.2em] transition hover:text-accent-foreground hover:border-accent">{v.cta} →</a>
             </div>
