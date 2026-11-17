@@ -37,6 +37,7 @@
 
 ## Approval log (verbatim)
 - 2026-11-17 14:03 — G5 PR #3 — Operator — "Approve"
+- 2026-11-17 14:13 — Change request PR #5 (favicon) — Operator — "approve"
 
 ## Launch plan
 | Milestone | Target date | Status |
@@ -50,5 +51,10 @@
 ## Decisions
 - 2026-11-17 — Canonical is the bare domain (https://masseusethehealer.com/), not www — matches how the site is already served on Netlify.
 
+## Change requests (after launch)
+| Date | Request | Old → new | PR | Approved by | Live |
+|---|---|---|---|---|---|
+| 2026-11-17 | Site had no own favicon | Lovable default heart → hands icon from client logo (ico 16/32/48, apple-touch 180, 512 png) | #5 (01f53b8) | Operator | ✅ |
+
 ## Session notes
-- 2026-11-17 — Added sitemap.xml, robots Sitemap line and canonical tag (PR #3, merged after approval). Operator verified Domain property via TXT, requested indexing of home page, submitted https://masseusethehealer.com/sitemap.xml. Sitemap confirmed live 14:07. Next: resubmit sitemap, move Search Console ownership to client, then Google Business Profile.
+- 2026-11-17 — Added sitemap.xml, robots Sitemap line and canonical tag (PR #3, merged after approval). Operator verified Domain property via TXT, requested indexing of home page, submitted https://masseusethehealer.com/sitemap.xml. Sitemap confirmed live 14:07. Favicon replaced (PR #5). Next: resubmit sitemap, move Search Console ownership to client, then Google Business Profile.
