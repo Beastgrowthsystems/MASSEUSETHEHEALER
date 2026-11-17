@@ -40,6 +40,8 @@
 - 2026-11-17 14:13 — Change request PR #5 (favicon) — Operator — "approve"
 - 2026-11-17 14:15 — PR #4 (project log) — Operator — "approve"
 - 2026-11-17 14:36 — Title wording — Operator — "this heading is also the best : Mobile Massage in Kathu, Kuruman & Mothibistad | Masseuse The Healer"
+- 2026-11-17 14:48 — PR #7 (Google profile + review links) — Operator — "approve"
+- 2026-11-17 14:58 — PR #8 (mobile speed) after Deploy Preview — Operator — "approve"
 - 2026-11-17 14:42 — PR #6 (SEO title/H1/schema/share image/alt text) after Deploy Preview — Operator — "everything matches / Approve"
 
 ## Launch plan
@@ -57,12 +59,14 @@
 ## Change requests (after launch)
 | Date | Request | Old → new | PR | Approved by | Live |
 |---|---|---|---|---|---|
+| 2026-11-17 | Mobile speed | PageSpeed mobile Perf 60 → 99, TBT 29,470 ms → 0 ms, Accessibility 96 → 100 (lighter smoke canvas, WebP photos, nav logo, heading order) | #8 (a861471) | Operator | ✅ |
+| 2026-11-17 | Google profile + review links | footer links + schema sameAs | #7 (f8c4fc5) | Operator | ✅ |
 | 2026-11-17 | SEO fixes from audit | Title + H1 with towns, HealthAndBeautyBusiness schema, og:image, per-photo alt text, Lovable meta removed | #6 (4e8670e) | Operator | ✅ |
 | 2026-11-17 | Site had no own favicon | Lovable default heart → hands icon from client logo (ico 16/32/48, apple-touch 180, 512 png) | #5 (01f53b8) | Operator | ✅ |
 
 ## Open SEO items (from 2026-11-17 audit)
 - Thin content (~260 words): needs client input — what each massage helps with, durations/prices, about the therapist and training, FAQs (table, transport cost, what to prepare).
-- Mobile speed not measured — operator to run pagespeed.web.dev.
+- Rich Results Test on live URL — operator to run and report.
 - Search Console ownership: client account to become Owner, agency → Full.
 
 ## Session notes
