@@ -5,7 +5,7 @@
 
 ## Status
 - **Phase:** 7 Search & Business Profile
-- **Next action:** Operator resubmits the sitemap in Search Console; client's Google account is made Owner in Search Console.
+- **Next action:** Approve PR #7 (Google profile + review links); client's Google account made Owner in Search Console; gather content answers from client.
 - **Waiting on:** Operator
 - **Open [[TBC]] items:** not audited yet
 
@@ -26,7 +26,7 @@
 | Official NAP (exact) | Name: Masseuse The Healer · Service areas: Kathu, Kuruman, Mothibistad (mobile) · Phone display: 078 650 1056 · Phone link: +27786501056 |
 | Business's Google account (owner) | [[TBC]] — Search Console currently owned by agency account |
 | Search Console | property type: Domain (DNS TXT) · verified: yes, 2026-11-17 · agency user: currently Owner → to become Full once client is Owner |
-| Google Business Profile | [[TBC]] |
+| Google Business Profile | exists, agency email is Manager (2026-11-17) · profile: https://share.google/PMDA4Ocp5WBi5TU4q · review link: https://g.page/r/CRBNmY9LPHmkECE/review · NAP confirmed matching by operator 2026-11-17 |
 
 ## Gates
 | Gate | Status | Date | Approved by | What exactly was approved |
@@ -38,13 +38,16 @@
 ## Approval log (verbatim)
 - 2026-11-17 14:03 — G5 PR #3 — Operator — "Approve"
 - 2026-11-17 14:13 — Change request PR #5 (favicon) — Operator — "approve"
+- 2026-11-17 14:15 — PR #4 (project log) — Operator — "approve"
+- 2026-11-17 14:36 — Title wording — Operator — "this heading is also the best : Mobile Massage in Kathu, Kuruman & Mothibistad | Masseuse The Healer"
+- 2026-11-17 14:42 — PR #6 (SEO title/H1/schema/share image/alt text) after Deploy Preview — Operator — "everything matches / Approve"
 
 ## Launch plan
 | Milestone | Target date | Status |
 |---|---|---|
 | Search Console verified | 2026-11-17 | ✅ Domain property |
 | Home page indexing requested | 2026-11-17 | ✅ |
-| Sitemap submitted | 2026-11-17 | Submitted; first fetch failed (file not yet live) → resubmit after PR #3 |
+| Sitemap submitted | 2026-11-17 | ✅ Status: Success |
 | Search Console 7-day check (Pages + sitemap status) | 2026-11-24 | ⬜ |
 | Search Console 4-week check (first query data) | 2026-12-15 | ⬜ |
 
@@ -54,7 +57,13 @@
 ## Change requests (after launch)
 | Date | Request | Old → new | PR | Approved by | Live |
 |---|---|---|---|---|---|
+| 2026-11-17 | SEO fixes from audit | Title + H1 with towns, HealthAndBeautyBusiness schema, og:image, per-photo alt text, Lovable meta removed | #6 (4e8670e) | Operator | ✅ |
 | 2026-11-17 | Site had no own favicon | Lovable default heart → hands icon from client logo (ico 16/32/48, apple-touch 180, 512 png) | #5 (01f53b8) | Operator | ✅ |
+
+## Open SEO items (from 2026-11-17 audit)
+- Thin content (~260 words): needs client input — what each massage helps with, durations/prices, about the therapist and training, FAQs (table, transport cost, what to prepare).
+- Mobile speed not measured — operator to run pagespeed.web.dev.
+- Search Console ownership: client account to become Owner, agency → Full.
 
 ## Session notes
 - 2026-11-17 — Added sitemap.xml, robots Sitemap line and canonical tag (PR #3, merged after approval). Operator verified Domain property via TXT, requested indexing of home page, submitted https://masseusethehealer.com/sitemap.xml. Sitemap confirmed live 14:07. Favicon replaced (PR #5). Next: resubmit sitemap, move Search Console ownership to client, then Google Business Profile.
